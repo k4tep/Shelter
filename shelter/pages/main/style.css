@@ -102,7 +102,7 @@ header {
     text-align: center;
 }
 
-#stcontent {
+#start-content {
     display: inline-block;
     margin-top: 180px;
     width: 1200px;
@@ -420,4 +420,158 @@ header {
 
     margin: 0px;
     margin-top: 30px;
+}
+
+.donation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    background: #F6F6F6;
+}
+
+.donation-content {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.donation-content img {
+    margin: 10px 0px;
+}
+
+.donation-content-text {
+    margin-left: 30px;
+    width: 380px;
+}
+
+.donation-content-text h3{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+
+    color: #545454;
+    margin: 0px;
+    margin-bottom: 20px;
+    margin-right: 80px;
+}
+
+.donation-content-text h5 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+
+    color: #545454;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.donation-content-text p{
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    display: flex;
+    align-items: center;
+
+    color: #B2B2B2;
+}
+
+#credit-card {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+
+    width: 349px;
+
+    background: #F1CDB3;
+    border-radius: 9px;
+}
+
+#credit-card img {
+    margin: 0px;
+}
+
+#credit-card a {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+
+    margin-left: 15px;
+    letter-spacing: 0.06em;
+
+    color: #545454;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: url("../../assets/images/footer-background.png") no-repeat;
+    background-size: cover;
+    padding: 40px;
+    padding-bottom: 0px;
+}
+
+.footer-content {
+    display: flex;
+    width: 1200px;
+    margin-bottom: 0px;
+}
+
+.footer-content h3{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+
+    letter-spacing: 0.06em;
+    margin: 0px;
+
+    color: #FFFFFF;
+}
+
+.footer-content a {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+
+    letter-spacing: 0.06em;
+
+    color: #F1CDB3;
+    margin-left: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.info-text {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.location {
+    width: 302px;
 }
