@@ -4,8 +4,15 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0px;
+    background: #FFFFFF;
     display: flex;
     justify-content: center;
+}
+
+a {
+    text-decoration: none;
 }
 
 .header-container {
@@ -84,10 +91,17 @@ header {
 
 #nav-menu li a {
     line-height: 60px;
+    color: #545454;
+}
+
+#nav-menu li a:hover {
+    color: #292929;
+    cursor: pointer;
 }
 
 #pets {
     color: #292929;
+    padding-bottom: 3px;
     border-bottom: 3px solid #F1CDB3;
 }
 
@@ -145,6 +159,12 @@ header {
     text-align: center;
 }
 
+.card-pets:hover {
+    background: #F1CDB3;
+    outline: 3px solid #F1CDB3;
+    cursor: pointer;
+}
+
 .card-pets.first {
     margin-left: 0px;
 }
@@ -192,6 +212,16 @@ header {
     color: #292929;
 }
 
+.card-pets:hover #learn-more {
+    border: 2px solid #FAFAFA;
+    background: #F1CDB3;
+    cursor: pointer;
+}
+
+#learn-more:hover {
+    color: #FAFAFA;
+}
+
 .pet-navigation {
     display: flex;
     justify-content: center;
@@ -212,7 +242,6 @@ header {
 
     align-items: center;
     text-align: center;
-    letter-spacing: 0.06em;
 
     color: #292929;
 }
@@ -232,6 +261,12 @@ header {
     border: 2px solid #F1CDB3;
     box-sizing: border-box;
     border-radius: 100px;
+}
+
+.slide.next:hover {
+    background: #F1CDB3;;
+    border: 2px solid #FAFAFA;
+    cursor: pointer;
 }
 
 footer {
@@ -264,6 +299,9 @@ footer {
 }
 
 .footer-content a {
+    display: flex;
+    justify-content: center;
+    
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -273,7 +311,10 @@ footer {
     letter-spacing: 0.06em;
 
     color: #F1CDB3;
-    margin-left: 20px;
+}
+
+.footer-content img {
+    margin-right: 20px;
 }
 
 .info {
@@ -286,6 +327,7 @@ footer {
     display: flex;
     margin-top: 40px;
     align-items: center;
+    height: 32px;
 }
 
 .location {

@@ -13,6 +13,10 @@ header {
     z-index: 1;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header-flex {
     width: 600px;
     position: relative;
@@ -86,12 +90,19 @@ header {
     margin: 0 15px;
 }
 
+#nav-menu li a:hover {
+    color: #FAFAFA;
+    cursor: pointer;
+}
+
 #nav-menu li a {
     line-height: 60px;
+    color: #CDCDCD;
 }
 
 #about-shelter {
     color: #FAFAFA;
+    padding-bottom: 3px;
     border-bottom: 3px solid #F1CDB3;
 }
 
@@ -150,7 +161,7 @@ header {
     padding: 15px 45px;
     background: #F1CDB3;
     border-radius: 100px;
-    border: 0px;
+    border: 2px solid #F1CDB3;
     
     font-family: 'Georgia';
     font-style: normal;
@@ -159,6 +170,11 @@ header {
     line-height: 22px;
     letter-spacing: 0.06em;
     color: #292929;
+}
+
+#make-friend:hover {
+    background: #FAFAFA;
+    cursor: pointer;
 }
 
 #start-puppy {
@@ -278,6 +294,12 @@ header {
     text-align: center;
 }
 
+.card-pets:hover {
+    background: #F1CDB3;
+    outline: 3px solid #F1CDB3;
+    cursor: pointer;
+}
+
 .card-pets p {
     font-family: 'Georgia';
     font-style: normal;
@@ -313,6 +335,16 @@ header {
     color: #292929;
 }
 
+.card-pets:hover #learn-more {
+    border: 2px solid #FAFAFA;
+    background: #F1CDB3;
+    cursor: pointer;
+}
+
+#learn-more:hover {
+    color: #FAFAFA;
+}
+
 #arrow {
     width: 52px;
     height: 52px;
@@ -327,13 +359,19 @@ header {
     color: #292929;
 }
 
+#arrow:hover {
+    background: #F1CDB3;
+    border: 2px solid #F6F6F6;
+    cursor: pointer;
+}
+
 #know-rest {
     width: 261px;
     height: 52px;
 
     background: #F1CDB3;
     border-radius: 100px;
-    border: 0px;
+    border: 2px solid #F1CDB3;
 
     font-family: 'Georgia';
     font-style: normal;
@@ -344,6 +382,11 @@ header {
     letter-spacing: 0.06em;
 
     color: #292929;
+}
+
+#know-rest:hover {
+    background: #FAFAFA;
+    cursor: pointer;
 }
 
 .help {
@@ -496,9 +539,11 @@ header {
 #credit-card {
     display: flex;
     align-items: center;
-    padding: 10px 15px;
+    
+    justify-content: center;
 
     width: 349px;
+    height: 43px;
 
     background: #F1CDB3;
     border-radius: 9px;
@@ -508,7 +553,7 @@ header {
     margin: 0px;
 }
 
-#credit-card a {
+#credit-card p {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -519,6 +564,16 @@ header {
     letter-spacing: 0.06em;
 
     color: #545454;
+}
+
+#credit-card:hover {
+    background: #F6F6F6;
+    outline: 2px solid #F1CDB3 ;
+}
+
+#credit-card a {
+    display: flex;
+    justify-content: center;
 }
 
 footer {
@@ -551,6 +606,9 @@ footer {
 }
 
 .footer-content a {
+    display: flex;
+    justify-content: center;
+    
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -560,7 +618,10 @@ footer {
     letter-spacing: 0.06em;
 
     color: #F1CDB3;
-    margin-left: 20px;
+}
+
+.footer-content img {
+    margin-right: 20px;
 }
 
 .info {
@@ -573,6 +634,7 @@ footer {
     display: flex;
     margin-top: 40px;
     align-items: center;
+    height: 32px;
 }
 
 .location {
