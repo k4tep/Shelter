@@ -11,6 +11,10 @@ header {
     justify-content: center;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -423,15 +427,23 @@ footer {
     }
 
     .header-container {
-        width: 257px;
+        width: 100%;
         justify-content: flex-start;
         margin-left: 10px;
     }
 
+    .right-header-flex {
+        display: none;
+    }
+
+    .left-header-flex {
+        width: 95%;
+    }
+
     .hamburger-menu {
         display: flex;
-        margin-left: 41px;
-        padding-top: 20px;
+        align-items: center;
+        margin-right: 45px;
     }
 
     #menu__toggle {
@@ -455,18 +467,18 @@ footer {
     .menu-button > span::after {
         display: block;
         position: absolute;
-        width: 100%;
+        width: 30px;
         height: 2px;
-        background-color: #F1CDB3;
+        background-color: #000000;
         transition-duration: .25s;
     }
     .menu-button > span::before {
         content: '';
-        top: -8px;
+        top: -10px;
     }
     .menu-button > span::after {
         content: '';
-        top: 8px;
+        top: 10px;
     }
 
     .menu-box {
@@ -518,7 +530,7 @@ footer {
         margin: 42px 30px 52px;
         width: 300px;
     }
-    
+
     .pets-content h3 {
         width: 300px;
         font-size: 25px;
@@ -543,10 +555,6 @@ footer {
 
     .slide {
         margin: -11px 5px;
-    }
-
-    .right-header-flex {
-        display: none;
     }
 
     footer {
