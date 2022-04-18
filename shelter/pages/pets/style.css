@@ -11,6 +11,10 @@ header {
     justify-content: center;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -158,6 +162,7 @@ a {
 
 .card-pets {
     width: 270px;
+    height: 435px;
     margin: 15px 20px 25px 20px;
 
     background: #FAFAFA;
@@ -343,4 +348,247 @@ footer {
 #footer-puppy {
     margin: 0;
     padding-left: 20px;
+}
+
+/* --Width 768px-- */
+
+@media screen and (max-width: 1270px) {
+    .header-container {
+        width: 768px;
+        justify-content: center;
+    }
+
+    #nav-menu ul{
+        margin-left: 7px;
+    }
+
+    .header-flex {
+        width: auto;
+    }
+
+    .pets-content{
+        margin-bottom: 76px;
+    }
+
+    .slider-pets {
+        width: 708px;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+
+    .card-pets {
+        margin: 0;
+        margin-bottom: 30px;
+        margin-left: 40px;
+    }
+
+    .card-pets.last {
+        margin-right: 40px;
+    }
+
+    .delete {
+        display: none;
+    }
+
+    footer {
+        padding-top: 30px;
+    }
+
+    .footer-content {
+        justify-content: center;
+        width: 708px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .info {
+        flex-direction: column;
+        width: 320px;
+        margin-top: 0px;
+        padding-left: 19px;
+    }
+
+    .location {
+        width: 307px;
+    }
+
+    #footer-puppy {
+        margin-top: 65px;
+        padding-left: 0;
+    }
+
+}
+
+/* --Width 320px-- */
+
+@media screen and (max-width: 758px) {
+    header {
+        justify-content: flex-start;
+    }
+
+    .header-container {
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 10px;
+    }
+
+    .right-header-flex {
+        display: none;
+    }
+
+    .left-header-flex {
+        width: 95%;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        align-items: center;
+        margin-right: 45px;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+        width: 30px;
+        height: 22px;
+    }
+
+    .menu-button {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    .menu-button > span,
+    .menu-button > span::before,
+    .menu-button > span::after {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: #000000;
+        transition-duration: .25s;
+    }
+    .menu-button > span::before {
+        content: '';
+        top: -10px;
+    }
+    .menu-button > span::after {
+        content: '';
+        top: 10px;
+    }
+
+    .menu-box {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 320px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #292929;
+    }
+      /* элементы меню */
+    .menu-item {
+        display: block;
+        padding: 20px 24px;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 160%;
+
+        color: #FAFAFA;
+    }
+    #pets {
+        color: #FAFAFA;
+        padding-bottom: 3px;
+        border-bottom: 3px solid #F1CDB3;
+    }
+
+    .menu-item:hover {
+        color: #FAFAFA;
+        cursor: pointer;
+    }
+
+    #menu__toggle:checked ~ .menu-button > span {
+        transform: rotate(90deg);
+    }
+    
+    #menu__toggle:checked ~ .menu-box {
+        display: block;
+        left: 0;
+        transition-duration: .25s;
+    }
+
+    .pets-content {
+        margin: 42px 30px 52px;
+        width: 300px;
+    }
+
+    .pets-content h3 {
+        width: 300px;
+        font-size: 25px;
+    }
+
+    .content-head {
+        width: 300px;
+    }
+
+    .slider-pets {
+        width: 300px;
+        margin-top: 15px;
+    }
+
+    .card-pets {
+        margin-left: 0px;
+    }
+
+    .second-row, .last {
+        display: none;
+    }
+
+    .slide {
+        margin: -11px 5px;
+    }
+
+    footer {
+        padding-top: 30px;
+   }
+
+   .footer-content {
+       width: 300px;
+   }
+
+   .info {
+       justify-content: center;
+       margin-bottom: 40px;
+       padding-left: 0;
+   }
+
+   .footer-content h3 {
+       text-align: center;
+       width: 235px;
+       font-size: 25px;
+       margin-right: 0;
+       margin-left: 32px;
+   }
+
+   .contacts {
+       margin-left: 25px;
+   }
+
+   .location {
+       margin-top: 45px;
+   }
+
+   #footer-puppy {
+       width: 260px;
+       margin: 0;
+   }
 }
