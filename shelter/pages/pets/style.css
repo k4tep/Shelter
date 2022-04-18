@@ -428,12 +428,104 @@ footer {
         margin-left: 10px;
     }
 
+    .hamburger-menu {
+        display: flex;
+        margin-left: 41px;
+        padding-top: 20px;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+        width: 30px;
+        height: 22px;
+    }
+
+    .menu-button {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    .menu-button > span,
+    .menu-button > span::before,
+    .menu-button > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #F1CDB3;
+        transition-duration: .25s;
+    }
+    .menu-button > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu-button > span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .menu-box {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 320px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #292929;
+    }
+      /* элементы меню */
+    .menu-item {
+        display: block;
+        padding: 20px 24px;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 160%;
+
+        color: #FAFAFA;
+    }
+    #pets {
+        color: #FAFAFA;
+        padding-bottom: 3px;
+        border-bottom: 3px solid #F1CDB3;
+    }
+
+    .menu-item:hover {
+        color: #FAFAFA;
+        cursor: pointer;
+    }
+
+    #menu__toggle:checked ~ .menu-button > span {
+        transform: rotate(90deg);
+    }
+    
+    #menu__toggle:checked ~ .menu-box {
+        display: block;
+        left: 0;
+        transition-duration: .25s;
+    }
+
     .pets-content {
         margin: 42px 30px 52px;
         width: 300px;
     }
+    
     .pets-content h3 {
+        width: 300px;
         font-size: 25px;
+    }
+
+    .content-head {
+        width: 300px;
     }
 
     .slider-pets {
