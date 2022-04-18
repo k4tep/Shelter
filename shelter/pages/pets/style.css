@@ -158,6 +158,7 @@ a {
 
 .card-pets {
     width: 270px;
+    height: 435px;
     margin: 15px 20px 25px 20px;
 
     background: #FAFAFA;
@@ -343,4 +344,151 @@ footer {
 #footer-puppy {
     margin: 0;
     padding-left: 20px;
+}
+
+/* --Width 768px-- */
+
+@media screen and (max-width: 1270px) {
+    .header-container {
+        width: 768px;
+        justify-content: center;
+    }
+
+    #nav-menu ul{
+        margin-left: 7px;
+    }
+
+    .header-flex {
+        width: auto;
+    }
+
+    .pets-content{
+        margin-bottom: 76px;
+    }
+
+    .slider-pets {
+        width: 708px;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+
+    .card-pets {
+        margin: 0;
+        margin-bottom: 30px;
+        margin-left: 40px;
+    }
+
+    .card-pets.last {
+        margin-right: 40px;
+    }
+
+    .delete {
+        display: none;
+    }
+
+    footer {
+        padding-top: 30px;
+    }
+
+    .footer-content {
+        justify-content: center;
+        width: 708px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .info {
+        flex-direction: column;
+        width: 320px;
+        margin-top: 0px;
+        padding-left: 19px;
+    }
+
+    .location {
+        width: 307px;
+    }
+
+    #footer-puppy {
+        margin-top: 65px;
+        padding-left: 0;
+    }
+
+}
+
+/* --Width 320px-- */
+
+@media screen and (max-width: 758px) {
+    header {
+        justify-content: flex-start;
+    }
+
+    .header-container {
+        width: 257px;
+        justify-content: flex-start;
+        margin-left: 10px;
+    }
+
+    .pets-content {
+        margin: 42px 30px 52px;
+        width: 300px;
+    }
+    .pets-content h3 {
+        font-size: 25px;
+    }
+
+    .slider-pets {
+        width: 300px;
+        margin-top: 15px;
+    }
+
+    .card-pets {
+        margin-left: 0px;
+    }
+
+    .second-row, .last {
+        display: none;
+    }
+
+    .slide {
+        margin: -11px 5px;
+    }
+
+    .right-header-flex {
+        display: none;
+    }
+
+    footer {
+        padding-top: 30px;
+   }
+
+   .footer-content {
+       width: 300px;
+   }
+
+   .info {
+       justify-content: center;
+       margin-bottom: 40px;
+       padding-left: 0;
+   }
+
+   .footer-content h3 {
+       text-align: center;
+       width: 235px;
+       font-size: 25px;
+       margin-right: 0;
+       margin-left: 32px;
+   }
+
+   .contacts {
+       margin-left: 25px;
+   }
+
+   .location {
+       margin-top: 45px;
+   }
+
+   #footer-puppy {
+       width: 260px;
+       margin: 0;
+   }
 }
