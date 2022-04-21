@@ -259,14 +259,6 @@ a {
     color: #292929;
 }
 
-.slide.back {
-    background: none;
-    border: 2px solid #CDCDCD;
-    box-sizing: border-box;
-    border-radius: 100px;
-    color: #CDCDCD;
-}
-
 .slide.next {
     background: none;
     border: 2px solid #F1CDB3;
@@ -278,6 +270,16 @@ a {
     background: #F1CDB3;;
     border: 2px solid #FAFAFA;
     cursor: pointer;
+}
+
+.slide.stop {
+    background: none;
+    border: 2px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 100px;
+    color: #CDCDCD;
+    pointer-events: none;
+    cursor: default;
 }
 
 footer {

@@ -5,20 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
     <title>Shelter</title>
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="header-flex left-header-flex">
-                <a href="">
-                    <div class="left-header-flex-logo">
-                        <h1 id="cozy-logo">Cozy House</h1>
-                    </div>
-                    <div class="left-header-flex-description">
-                        <h4 id="cozy-description">Shelter for pets in Boston</h4>
-                    </div>
-                </a>
+                <div class="left-header-flex-logo">
+                    <h1 id="cozy-logo">Cozy House</h1>
+                </div>
+                <div class="left-header-flex-description">
+                    <h4 id="cozy-description">Shelter for pets in Boston</h4>
+                </div>
             </div>
             <div class="header-flex right-header-flex">
                 <nav id="nav-menu">
@@ -30,10 +29,10 @@
                             <a id="pets" href="../../pages/pets/index.html">Our pets</a>
                         </li>
                         <li>
-                            <a href="#help">Help the shelter</a>
+                            <a href="#help" class="disabled">Help the shelter</a>
                         </li>
                         <li>
-                            <a href="#contacts">Contacts</a>
+                            <a href="#contacts" class="disabled">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -67,7 +66,7 @@
                 <h2>Not only people need a house</h2>
                 <p id="subheading">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
                 <div class="button-make-friend">
-                    <a href="#our-pets">
+                    <a href="../../pages/pets/index.html">
                         <input type="button" id="make-friend" value="Make a friend" >
                     </a>
                 </div>
@@ -92,23 +91,27 @@
                 <h3 id="our-pets">are looking for a house</h3>
             </div>
             <div class="slider-pets">
-                <input type="button" id="arrow" class="left" value="←">
-                <div class="card-pets">
-                    <img src="../../assets/images/pets-katrine.png">
-                    <p>Katrine</p>
-                    <input type="button" id="learn-more" value="Learn more">
+                <input type="button" class="arrow" id="left" value="←" onclick="slide(-1)">
+                <div class="slider">
+                    <div class="slider-card" id="slider-card">
+                        <div class="card-pets">
+                            <img id="1-img" src="../../assets/images/pets-katrine.png">
+                            <p id="1-name">Katrine</p>
+                            <input type="button" class="learn-more" value="Learn more">
+                        </div>
+                        <div class="card-pets">
+                            <img id="2-img" src="../../assets/images/pets-jennifer.png">
+                            <p id="2-name">Jennifer</p>
+                            <input type="button" class="learn-more" value="Learn more">
+                        </div>
+                        <div class="card-pets">
+                            <img id="3-img" src="../../assets/images/pets-woody.png">
+                            <p id="3-name">Woody</p>
+                            <input type="button" class="learn-more" value="Learn more">
+                        </div>
+                    </div>
                 </div>
-                <div class="card-pets delete">
-                    <img src="../../assets/images/pets-jennifer.png">
-                    <p>Jennifer</p>
-                    <input type="button" id="learn-more" value="Learn more">
-                </div>
-                <div class="card-pets last-slide">
-                    <img src="../../assets/images/pets-woody.png">
-                    <p>Woody</p>
-                    <input type="button" id="learn-more" value="Learn more">
-                </div>
-                <input type="button" id="arrow" class="right" value="→">
+                <input type="button" class="arrow" id="right" value="→" onclick="slide(1)">
             </div>
             <a href="../../pages/pets/index.html">
                 <input type="button" id="know-rest" value="Get to know the rest">

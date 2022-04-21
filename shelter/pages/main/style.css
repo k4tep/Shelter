@@ -110,6 +110,11 @@ a {
     color: #CDCDCD;
 }
 
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
 #about-shelter {
     color: #FAFAFA;
     padding-bottom: 3px;
@@ -297,9 +302,23 @@ a {
 .slider-pets {
     display: flex;
     justify-content: center;
-
+    align-items: center;
     width: 1200px;
     margin: 55px 0px;
+
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+    width: 1080px;
+    overflow: hidden;
+}
+
+.slider-card {
+    display: flex;
+    justify-content: center;
 }
 
 .card-pets {
@@ -330,7 +349,7 @@ a {
     color: #545454;
 }
 
-#learn-more {
+.learn-more {
     padding: 15px 45px;
 
     border: 2px solid #F1CDB3;
@@ -352,17 +371,17 @@ a {
     color: #292929;
 }
 
-.card-pets:hover #learn-more {
+.card-pets:hover .learn-more {
     border: 2px solid #FAFAFA;
     background: #F1CDB3;
     cursor: pointer;
 }
 
-#learn-more:hover {
+.learn-more:hover {
     color: #FAFAFA;
 }
 
-#arrow {
+.arrow {
     width: 52px;
     height: 52px;
 
@@ -376,7 +395,7 @@ a {
     color: #292929;
 }
 
-#arrow:hover {
+.arrow:hover {
     background: #F1CDB3;
     border: 2px solid #F6F6F6;
     cursor: pointer;
@@ -739,15 +758,25 @@ footer {
         width: 708px;
     }
 
-    .last-slide {
-        display: none;
+    .slider {
+        margin: 0 12px;
+        width: 600px;
     }
+
+    .slider-card {
+        position: relative;
+        left: 155px;
+    }
+
+    /* .last-slide {
+        display: none;
+    } */
 
     .card-pets {
         margin: 0 20px;
     }
 
-    #arrow {
+    .arrow {
         margin: 195px -9px;
     }
 
@@ -902,7 +931,7 @@ footer {
         text-align: center;
         background-color: #292929;
     }
-      /* элементы меню */
+
     .menu-item {
         display: block;
         padding: 20px 24px;
@@ -923,13 +952,18 @@ footer {
     #menu__toggle:checked ~ .menu-button > span {
         transform: rotate(90deg);
     }
+
+    @keyframes slide-in {
+        from {right: -320px;}
+        to {right: 0;}
+    }
     
     #menu__toggle:checked ~ .menu-box {
         display: block;
-        left: 0;
-        transition-duration: .25s;
+        right: 0;
+        animation-name: slide-in;
+        animation-duration: .25s;
     }
-
 
     #start-content {
         margin: 150px 0 0;
@@ -1010,8 +1044,17 @@ footer {
 
     .slider-pets {
         margin: 0;
-        margin-top: 17px;
         width: 300px;
+    }
+
+    .slider {
+        margin: 0 0;
+        width: 280px;
+        margin-top: -55px;
+    }
+
+    .slider-card {
+        left: 310px;
     }
 
     .card-pets{
@@ -1022,13 +1065,9 @@ footer {
         margin: 28px 98px;
     }
 
-    .delete {
-        display: none;
-    }
-
-    #arrow {
-        margin: 0 -116px;
-        margin-top: 455px;
+    .arrow {
+        margin: 0 -100px;
+        margin-top: 473px;
     }
 
     #know-rest {

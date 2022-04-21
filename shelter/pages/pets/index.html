@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  href="style.css" rel="stylesheet" type="text/css"> 
+    <script src="script.js"></script>
     <title>Our pets</title>
 </head>
 <body>
@@ -70,52 +71,52 @@
             </div>
             <div class="slider-pets">
                 <div class="card-pets first">
-                    <img src="../../assets/images/pets-katrine.png">
-                    <p>Katrine</p>
+                    <img id="1-img" src="../../assets/images/pets-katrine.png">
+                    <p id="1-name">Katrine</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
                 <div class="card-pets">
-                    <img src="../../assets/images/pets-jennifer.png">
-                    <p>Jennifer</p>
+                    <img id="2-img" src="../../assets/images/pets-jennifer.png">
+                    <p id="2-name">Jennifer</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
                 <div class="card-pets">
-                    <img src="../../assets/images/pets-woody.png">
-                    <p>Woody</p>
+                    <img id="3-img" src="../../assets/images/pets-woody.png">
+                    <p id="3-name">Woody</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
                 <div class="card-pets last">
-                    <img src="../../assets/images/pets-sophia.png">
-                    <p>Sophia</p>
+                    <img id="4-img" src="../../assets/images/pets-sophia.png">
+                    <p id="4-name">Sophia</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
                 <div class="card-pets first second-row">
-                    <img src="../../assets/images/pets-timmy.png">
-                    <p>Timmy</p>
+                    <img id="5-img" src="../../assets/images/pets-timmy.png">
+                    <p id="5-name">Timmy</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
                 <div class="card-pets second-row">
-                    <img src="../../assets/images/pets-charly.png">
-                    <p>Charly</p>
+                    <img id="6-img" src="../../assets/images/pets-charly.png">
+                    <p id="6-name">Charly</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
                 <div class="card-pets second-row delete">
-                    <img src="../../assets/images/pets-scarlet.png">
-                    <p>Scarlet</p>
+                    <img id="7-img" src="../../assets/images/pets-scarlet.png">
+                    <p id="7-name">Scarlet</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
                 <div class="card-pets last second-row delete">
-                    <img src="../../assets/images/pets-freddie.png">
-                    <p>Freddie</p>
+                    <img id="8-img" src="../../assets/images/pets-freddie.png">
+                    <p id="8-name">Freddie</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
             </div>
             <div class="pet-navigation">
-                <input type="button" class="slide back" value="<<" disabled>
-                <input type="button" class="slide back" value="<" disabled>
-                <input type="button" class="slide" value="1">
-                <input type="button" class="slide next" value=">">
-                <input type="button" class="slide next" value=">>">
+                <input type="button" id="first-page" onclick="firstPage()" class="slide next stop" value="<<">
+                <input type="button" id="btn_back" onclick="slide(-1)" class="slide next stop" value="<">
+                <input type="button" id="page" class="slide" value="1">
+                <input type="button" id="btn_next" onclick="slide(1)" class="slide next" value=">">
+                <input type="button" id="last-page" onclick="lastPage()"class="slide next" value=">>">
             </div>
         </div>
     </div>
