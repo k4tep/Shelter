@@ -684,6 +684,121 @@ footer {
     padding-left: 20px;
 }
 
+.background-popup {
+    position:fixed;
+    left:0;
+    top: 0;
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: rgba(13, 13, 13, 0.4);
+}
+
+.popup-closed {
+    visibility: hidden;
+}
+
+.popup-open {
+    visibility: visible;
+}
+
+.popup {
+    display: flex;
+    height: 500px;
+    width: 900px;
+    background: #FAFAFA;
+    border-radius: 9px;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.close-popup {
+    font-size: 30px;
+    align-self: flex-end;
+    margin: 0;
+    margin-right: 150px;
+    background-color: rgba(13, 13, 13, 0.04);
+}
+
+#img-popup {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px 0px 0px 9px;
+}
+
+.popup-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    width: 351px;
+    height: 362px;
+}
+
+#name-pet {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    text-align: left;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+#breed-pet {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    text-align: left;
+    margin: 10px 0;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+#info-pet {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    text-align: left;
+    margin: 0;
+    margin-top: 30px;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.pet-list {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    padding-left: 15px;
+    margin: 0;
+    margin-top: 40px;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+}
+
+.pet-list li {
+    margin-bottom: 10px;
+}
+
+.pet-list li::marker {
+    color: #F1CDB3;
+}
+
 /* --Width 768px-- */
 
 @media screen and (max-width: 1270px) {
@@ -858,6 +973,41 @@ footer {
         margin-top: 65px;
         padding-left: 0;
     }
+
+    .popup {
+        height: 350px;
+        width: 630px;
+    }
+
+    #img-popup {
+        width: 350px;
+        height: 350px;
+    }
+
+    .popup-info{
+        width: 260px;
+        height: 303px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .pet-list {
+        margin-top: 20px;
+    }
+
+    #info-pet {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .close-popup {
+        margin: 0;
+        margin-right: 35px;
+    }
+
+    .pet-list li {
+        margin-bottom: 5px;
+    }
 }
 
 /* --Width 320px-- */
@@ -900,9 +1050,9 @@ footer {
         z-index: 1;
     }
     
-    .menu-button > span,
-    .menu-button > span::before,
-    .menu-button > span::after {
+    #burger,
+    #burger::before,
+    #burger::after {
         display: block;
         position: absolute;
         width: 30px;
@@ -910,18 +1060,19 @@ footer {
         background-color: #F1CDB3;
         transition-duration: .25s;
     }
-    .menu-button > span::before {
+    #burger::before {
         content: '';
         top: -10px;
     }
-    .menu-button > span::after {
+    #burger::after {
         content: '';
         top: 10px;
     }
 
     .menu-box {
-        display: none;
+        visibility: hidden;
         position: fixed;
+        right: 0;
         top: 0;
         width: 320px;
         height: 100%;
@@ -949,7 +1100,7 @@ footer {
         cursor: pointer;
     }
 
-    #menu__toggle:checked ~ .menu-button > span {
+    .burger-rotate {
         transform: rotate(90deg);
     }
 
@@ -957,10 +1108,23 @@ footer {
         from {right: -320px;}
         to {right: 0;}
     }
-    
-    #menu__toggle:checked ~ .menu-box {
+
+    @keyframes slide-out {
+        from {right: 0;}
+        to {right: -320px;}
+    }
+
+    .close {
         display: block;
-        right: 0;
+        visibility: visible;
+        animation-name: slide-out;
+        animation-duration: .25s;
+
+    }
+    
+    .open {
+        display: block;
+        visibility: visible;
         animation-name: slide-in;
         animation-duration: .25s;
     }
@@ -1202,6 +1366,45 @@ footer {
     #footer-puppy {
         width: 260px;
         margin: 0;
+    }
+
+    .popup {
+        width: 240px;
+        height: auto;;
+        justify-content: center;
+    }
+
+    #img-popup {
+        display: none;
+    }
+
+    .popup-info{
+        width: 220px;
+        height: auto;
+        margin: 10px;
+    }
+
+    #name-pet {
+        text-align: center;
+        width: auto;
+    }
+
+    #breed-pet {
+        text-align: center;
+
+    }
+
+    #info-pet {
+        text-align: justify;
+    }
+
+    .pet-list {
+        margin-top: 24px;
+    }
+
+    .close-popup {
+        margin: 0;
+        margin-right: 5px;
     }
 
 }

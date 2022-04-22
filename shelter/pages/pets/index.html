@@ -70,45 +70,62 @@
                 <h3 id="our-pets">are looking for a house</h3>
             </div>
             <div class="slider-pets">
-                <div class="card-pets first">
+                <div class="card-pets first" onclick="openPopup(1)">
                     <img id="1-img" src="../../assets/images/pets-katrine.png">
                     <p id="1-name">Katrine</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets">
+                <div class="card-pets" onclick="openPopup(2)">
                     <img id="2-img" src="../../assets/images/pets-jennifer.png">
                     <p id="2-name">Jennifer</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets">
+                <div class="card-pets" onclick="openPopup(3)">
                     <img id="3-img" src="../../assets/images/pets-woody.png">
                     <p id="3-name">Woody</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets last">
+                <div class="card-pets last" onclick="openPopup(4)">
                     <img id="4-img" src="../../assets/images/pets-sophia.png">
                     <p id="4-name">Sophia</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets first second-row">
+                <div class="card-pets first second-row" onclick="openPopup(5)">
                     <img id="5-img" src="../../assets/images/pets-timmy.png">
                     <p id="5-name">Timmy</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets second-row">
+                <div class="card-pets second-row" onclick="openPopup(6)">
                     <img id="6-img" src="../../assets/images/pets-charly.png">
                     <p id="6-name">Charly</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets second-row delete">
+                <div class="card-pets second-row delete" onclick="openPopup(7)">
                     <img id="7-img" src="../../assets/images/pets-scarlet.png">
                     <p id="7-name">Scarlet</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets last second-row delete">
+                <div class="card-pets last second-row delete" onclick="openPopup(8)">
                     <img id="8-img" src="../../assets/images/pets-freddie.png">
                     <p id="8-name">Freddie</p>
                     <input type="button" id="learn-more" value="Learn more">
+                </div>
+            </div>
+            <div id="popup" class="background-popup popup-closed" onclick="closePopup()">
+                <input type="button" class="slide next close-popup" id="close-popup" value="×" onclick="closePopup()">
+                <div class="popup" onclick="event.stopPropagation()">
+                    <img id="img-popup" src="../../assets/images/pets-jennifer.png" >
+                    <div class="popup-info">
+                        <h3 id="name-pet">Jennifer</h3>
+                        <h4 id="breed-pet">Dog - Labrador</h4>
+                        <h5 id="info-pet">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</h5>
+                        <ul class="pet-list">
+                            <li id="age-pet"><b>Age:</b> 2 months</li>
+                            <li id="inoculations-pet"><b>Inoculations:</b> none</li>
+                            <li id="diseases-pet"><b>Diseases:</b> none</li>
+                            <li id="parasites-pet"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="pet-navigation">

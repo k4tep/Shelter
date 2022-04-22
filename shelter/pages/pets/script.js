@@ -208,3 +208,22 @@ const lastPage = () => {
     pageNode.value = amountOfPages - 1;
     slide(1); 
 }
+
+const openPopup = (counter) => {
+    const offset = (activeSlide + counter) % pets.length;
+    document.getElementById(`img-popup`).src = pets[offset].img;
+    document.getElementById(`name-pet`).innerHTML = pets[offset].name;
+    document.getElementById(`breed-pet`).innerHTML = pets[offset].type + " - " + pets[offset].breed;
+    document.getElementById(`info-pet`).innerHTML = pets[offset].description;
+    document.getElementById(`age-pet`).innerHTML = "<b>Age: </b>" + pets[offset].age;
+    document.getElementById(`inoculations-pet`).innerHTML = "<b>Inoculations: </b>" + pets[offset].inoculations;
+    document.getElementById(`diseases-pet`).innerHTML = "<b>Diseases: </b>" + pets[offset].diseases;
+    document.getElementById(`parasites-pet`).innerHTML = "<b>Parasites: </b>" + pets[offset].parasites;
+    document.getElementById('popup').classList.remove('popup-closed')
+    document.getElementById('popup').classList.add('popup-open');
+}
+
+const closePopup = () => {
+    document.getElementById('popup').classList.remove('popup-open')
+    document.getElementById('popup').classList.add('popup-closed');
+}

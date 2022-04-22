@@ -38,11 +38,11 @@
                 </nav>
             </div>
             <div class="hamburger-menu">
-                <input id="menu__toggle" type="checkbox" />
+                <input id="menu__toggle" type="button" onclick="burger()">
                 <label class="menu-button" for="menu__toggle">
-                  <span></span>
+                  <span id="burger" class=""></span>
                 </label>
-                <ul class="menu-box">
+                <ul id="burg-menu" class="menu-box">
                     <li>
                         <a class="menu-item" id="about-shelter">About the shelter</a>
                     </li>
@@ -94,17 +94,17 @@
                 <input type="button" class="arrow" id="left" value="←" onclick="slide(-1)">
                 <div class="slider">
                     <div class="slider-card" id="slider-card">
-                        <div class="card-pets">
+                        <div class="card-pets" onclick="openPopup(1)">
                             <img id="1-img" src="../../assets/images/pets-katrine.png">
                             <p id="1-name">Katrine</p>
                             <input type="button" class="learn-more" value="Learn more">
                         </div>
-                        <div class="card-pets">
+                        <div class="card-pets" onclick="openPopup(2)">
                             <img id="2-img" src="../../assets/images/pets-jennifer.png">
                             <p id="2-name">Jennifer</p>
                             <input type="button" class="learn-more" value="Learn more">
                         </div>
-                        <div class="card-pets">
+                        <div class="card-pets" onclick="openPopup(3)">
                             <img id="3-img" src="../../assets/images/pets-woody.png">
                             <p id="3-name">Woody</p>
                             <input type="button" class="learn-more" value="Learn more">
@@ -112,6 +112,23 @@
                     </div>
                 </div>
                 <input type="button" class="arrow" id="right" value="→" onclick="slide(1)">
+            </div>
+            <div id="popup" class="background-popup popup-closed" onclick="closePopup()">
+                <input type="button" class="arrow close-popup" id="close-popup" value="×" onclick="closePopup()">
+                <div class="popup" onclick="event.stopPropagation()">
+                    <img id="img-popup" src="../../assets/images/pets-jennifer.png" >
+                    <div class="popup-info">
+                        <h3 id="name-pet">Jennifer</h3>
+                        <h4 id="breed-pet">Dog - Labrador</h4>
+                        <h5 id="info-pet">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</h5>
+                        <ul class="pet-list">
+                            <li id="age-pet"><b>Age:</b> 2 months</li>
+                            <li id="inoculations-pet"><b>Inoculations:</b> none</li>
+                            <li id="diseases-pet"><b>Diseases:</b> none</li>
+                            <li id="parasites-pet"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <a href="../../pages/pets/index.html">
                 <input type="button" id="know-rest" value="Get to know the rest">
