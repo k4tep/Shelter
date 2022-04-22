@@ -209,6 +209,25 @@ const lastPage = () => {
     slide(1); 
 }
 
+const burgerClick = () => {
+
+    const burgerMenu = document.getElementById('burg-menu');
+    const burgerIcon = document.getElementById('burger');
+    const burgerBlock = document.getElementById('back-burg');
+
+    burgerMenu.classList.contains('open') ? burgerMenu.classList.remove('open') : burgerMenu.classList.add('open');
+    if(!burgerMenu.classList.contains('start')){
+        burgerMenu.classList.contains('close') ? burgerMenu.classList.remove('close') :  burgerMenu.classList.add('close');
+    }
+
+    if(burgerMenu.classList.contains('start')){
+        burgerMenu.classList.remove('start');
+    }
+
+    burgerBlock.classList.toggle('hamburger-background');
+    burgerIcon.classList.toggle('burger-rotate');
+}
+
 const openPopup = (counter) => {
     const offset = (activeSlide + counter) % pets.length;
     document.getElementById(`img-popup`).src = pets[offset].img;

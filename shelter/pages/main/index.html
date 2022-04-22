@@ -37,27 +37,28 @@
                     </ul>
                 </nav>
             </div>
-            <div class="hamburger-menu">
-                <input id="menu__toggle" type="button" onclick="burger()">
-                <label class="menu-button" for="menu__toggle">
-                  <span id="burger" class=""></span>
-                </label>
-                <ul id="burg-menu" class="menu-box">
-                    <li>
-                        <a class="menu-item" id="about-shelter">About the shelter</a>
-                    </li>
-                    <li>
-                        <a class="menu-item" id="pets" href="../../pages/pets/index.html">Our pets</a>
-                    </li>
-                    <li>
-                        <a class="menu-item" href="#help">Help the shelter</a>
-                    </li>
-                    <li>
-                        <a class="menu-item" href="#contacts">Contacts</a>
-                    </li>
-                </ul>
-              </div>
-        </div>
+            <div id="back-burg" class="" onclick="burgerClick()">
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="button" onclick="burgerClick()">
+                    <label class="menu-button" for="menu__toggle">
+                      <span id="burger" class=""></span>
+                    </label>
+                    <ul id="burg-menu" class="menu-box start" onclick="event.stopPropagation()">
+                        <li>
+                            <a class="menu-item" id="about-shelter">About the shelter</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" id="pets" href="../../pages/pets/index.html">Our pets</a>
+                        </li>
+                        <li>
+                            <a class="menu-item disabled" href="#help">Help the shelter</a>
+                        </li>
+                        <li>
+                            <a class="menu-item disabled" href="#contacts">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
     </header>
     <div id="start-screen">

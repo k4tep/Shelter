@@ -592,10 +592,25 @@ footer {
         width: 95%;
     }
 
+    .hamburger-background {
+        position:fixed;
+        left:0;
+        top: 0;
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 29px;
+        align-items: flex-end;
+        z-index: 2;
+        background-color: rgba(13, 13, 13, 0.4);
+    }
+
     .hamburger-menu {
         display: flex;
         align-items: center;
-        margin-right: 45px;
+        margin-right: 55px;
+        margin-top: 20px;
     }
 
     #menu__toggle {
@@ -614,41 +629,46 @@ footer {
         z-index: 1;
     }
     
-    .menu-button > span,
-    .menu-button > span::before,
-    .menu-button > span::after {
+    #burger,
+    #burger::before,
+    #burger::after {
         display: block;
         position: absolute;
         width: 30px;
-        height: 2px;
+        height: 3px;
+        outline: 1px solid #FAFAFA;
         background-color: #000000;
         transition-duration: .25s;
     }
-    .menu-button > span::before {
+    #burger::before {
         content: '';
         top: -10px;
     }
-    .menu-button > span::after {
+    #burger::after {
         content: '';
         top: 10px;
     }
 
     .menu-box {
-        display: none;
+        visibility: hidden;
         position: fixed;
+        right: 0;
         top: 0;
         width: 320px;
         height: 100%;
         margin: 0;
-        padding: 80px 0;
+        padding: 250px 0;
         list-style: none;
         text-align: center;
         background-color: #292929;
     }
-      /* элементы меню */
+
+    .menu-box li {
+        margin-bottom: 40px;
+    }
+
     .menu-item {
-        display: block;
-        padding: 20px 24px;
+        display: inline;
         font-family: 'Arial';
         font-style: normal;
         font-weight: 400;
@@ -657,25 +677,50 @@ footer {
 
         color: #FAFAFA;
     }
-    #pets {
-        color: #FAFAFA;
-        padding-bottom: 3px;
-        border-bottom: 3px solid #F1CDB3;
-    }
 
     .menu-item:hover {
         color: #FAFAFA;
         cursor: pointer;
     }
 
-    #menu__toggle:checked ~ .menu-button > span {
+    .burger-rotate {
         transform: rotate(90deg);
     }
-    
-    #menu__toggle:checked ~ .menu-box {
+
+    @keyframes slide-in {
+        from {right: -320px;
+            visibility: hidden;}
+        to {right: 0;
+            visibility: visible;}
+    }
+
+    @keyframes slide-out {
+        from {right: 0;
+            visibility: visible;
+        }
+        to {right: -320px;
+            visibility: hidden;}
+    }
+
+    .close {
         display: block;
-        left: 0;
-        transition-duration: .25s;
+        animation-name: slide-out;
+        animation-duration: .25s;
+        visibility: hidden;
+
+    }
+    
+    .open {
+        display: block;
+        animation-name: slide-in;
+        animation-duration: .25s;
+        visibility: visible;
+    }
+
+    #pets {
+        color: #FAFAFA;
+        padding-bottom: 3px;
+        border-bottom: 3px solid #F1CDB3;
     }
 
     .pets-content {

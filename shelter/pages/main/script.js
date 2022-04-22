@@ -109,14 +109,23 @@ const slide = (direction) => {
     }
 }
 
-const burger = () => {
-    document.getElementById('burg-menu').classList.toggle('open');
-    document.getElementById('burger').classList.toggle('burger-rotate');
-    if (document.getElementById('burg-menu').classList.contains('open')) {
-        document.getElementById('burg-menu').classList.add('close');
+const burgerClick = () => {
 
-        setTimeout(document.getElementById('burg-menu').classList.remove('close'), 100000);
+    const burgerMenu = document.getElementById('burg-menu');
+    const burgerIcon = document.getElementById('burger');
+    const burgerBlock = document.getElementById('back-burg');
+
+    burgerMenu.classList.contains('open') ? burgerMenu.classList.remove('open') : burgerMenu.classList.add('open');
+    if(!burgerMenu.classList.contains('start')){
+        burgerMenu.classList.contains('close') ? burgerMenu.classList.remove('close') :  burgerMenu.classList.add('close');
     }
+
+    if(burgerMenu.classList.contains('start')){
+        burgerMenu.classList.remove('start');
+    }
+
+    burgerBlock.classList.toggle('hamburger-background');
+    burgerIcon.classList.toggle('burger-rotate');
 }
 
 const openPopup = (counter) => {
