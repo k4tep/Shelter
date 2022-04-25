@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  href="style.css" rel="stylesheet" type="text/css"> 
+    <script src="script.js"></script>
     <title>Our pets</title>
 </head>
-<body>
+<body id="body">
     <header>
         <div class="header-container">
             <div class="header-flex left-header-flex">
@@ -33,32 +34,34 @@
                             <a href="../../pages/main/index.html#help">Help the shelter</a>
                         </li>
                         <li>
-                            <a href="#contacts">Contacts</a>
+                            <a href="#contacts"">Contacts</a>
                         </li>
                     </ul>
                 </nav>
             </div>
 
-            <div class="hamburger-menu">
-                <input id="menu__toggle" type="checkbox" />
-                <label class="menu-button" for="menu__toggle">
-                  <span></span>
-                </label>
-                <ul class="menu-box">
-                    <li>
-                        <a class="menu-item" id="about-shelter" href="../../pages/main/index.html">About the shelter</a>
-                    </li>
-                    <li>
-                        <a class="menu-item" id="pets" >Our pets</a>
-                    </li>
-                    <li>
-                        <a class="menu-item" href="../../pages/main/index.html#help">Help the shelter</a>
-                    </li>
-                    <li>
-                        <a class="menu-item" href="#contacts">Contacts</a>
-                    </li>
-                </ul>
-              </div>
+            <div id="back-burg" class="" onclick="burgerClick()">
+                <div class="hamburger-menu">
+                    <input id="menu__toggle" type="button" onclick="burgerClick()">
+                    <label class="menu-button" for="menu__toggle">
+                      <span id="burger" class=""></span>
+                    </label>
+                    <ul id="burg-menu" class="menu-box start" onclick="event.stopPropagation()">
+                        <li>
+                            <a class="menu-item" id="about-shelter" href="../../pages/main/index.html">About the shelter</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" id="pets" onclick="burgerClick()">Our pets</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="../../pages/main/index.html#help" onclick="burgerClick()">Help the shelter</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="#contacts" onclick="burgerClick()">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
         </div>
     </header>
@@ -69,53 +72,70 @@
                 <h3 id="our-pets">are looking for a house</h3>
             </div>
             <div class="slider-pets">
-                <div class="card-pets first">
-                    <img src="../../assets/images/pets-katrine.png">
-                    <p>Katrine</p>
+                <div class="card-pets first" onclick="openPopup(1)">
+                    <img id="1-img" src="../../assets/images/pets-katrine.png">
+                    <p id="1-name">Katrine</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets">
-                    <img src="../../assets/images/pets-jennifer.png">
-                    <p>Jennifer</p>
+                <div class="card-pets" onclick="openPopup(2)">
+                    <img id="2-img" src="../../assets/images/pets-jennifer.png">
+                    <p id="2-name">Jennifer</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets">
-                    <img src="../../assets/images/pets-woody.png">
-                    <p>Woody</p>
+                <div class="card-pets" onclick="openPopup(3)">
+                    <img id="3-img" src="../../assets/images/pets-woody.png">
+                    <p id="3-name">Woody</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets last">
-                    <img src="../../assets/images/pets-sophia.png">
-                    <p>Sophia</p>
+                <div class="card-pets last" onclick="openPopup(4)">
+                    <img id="4-img" src="../../assets/images/pets-sophia.png">
+                    <p id="4-name">Sophia</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets first second-row">
-                    <img src="../../assets/images/pets-timmy.png">
-                    <p>Timmy</p>
+                <div class="card-pets first second-row" onclick="openPopup(5)">
+                    <img id="5-img" src="../../assets/images/pets-timmy.png">
+                    <p id="5-name">Timmy</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets second-row">
-                    <img src="../../assets/images/pets-charly.png">
-                    <p>Charly</p>
+                <div class="card-pets second-row" onclick="openPopup(6)">
+                    <img id="6-img" src="../../assets/images/pets-charly.png">
+                    <p id="6-name">Charly</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets second-row delete">
-                    <img src="../../assets/images/pets-scarlet.png">
-                    <p>Scarlet</p>
+                <div class="card-pets second-row delete" onclick="openPopup(7)">
+                    <img id="7-img" src="../../assets/images/pets-scarlet.png">
+                    <p id="7-name">Scarlet</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
-                <div class="card-pets last second-row delete">
-                    <img src="../../assets/images/pets-freddie.png">
-                    <p>Freddie</p>
+                <div class="card-pets last second-row delete" onclick="openPopup(8)">
+                    <img id="8-img" src="../../assets/images/pets-freddie.png">
+                    <p id="8-name">Freddie</p>
                     <input type="button" id="learn-more" value="Learn more">
                 </div>
             </div>
+            <div id="popup" class="background-popup popup-closed" onclick="closePopup()">
+                <input type="button" class="slide next close-popup" id="close-popup" value="×" onclick="closePopup()">
+                <div class="popup" onclick="event.stopPropagation()">
+                    <img id="img-popup" src="../../assets/images/pets-jennifer.png" >
+                    <div class="popup-info">
+                        <h3 id="name-pet">Jennifer</h3>
+                        <h4 id="breed-pet">Dog - Labrador</h4>
+                        <h5 id="info-pet">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</h5>
+                        <ul class="pet-list">
+                            <li id="age-pet"><b>Age:</b> 2 months</li>
+                            <li id="inoculations-pet"><b>Inoculations:</b> none</li>
+                            <li id="diseases-pet"><b>Diseases:</b> none</li>
+                            <li id="parasites-pet"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="pet-navigation">
-                <input type="button" class="slide back" value="<<" disabled>
-                <input type="button" class="slide back" value="<" disabled>
-                <input type="button" class="slide" value="1">
-                <input type="button" class="slide next" value=">">
-                <input type="button" class="slide next" value=">>">
+                <input type="button" id="first-page" onclick="firstPage()" class="slide next stop" value="<<">
+                <input type="button" id="btn_back" onclick="slide(-1)" class="slide next stop" value="<">
+                <input type="button" id="page" class="slide" value="1">
+                <input type="button" id="btn_next" onclick="slide(1)" class="slide next" value=">">
+                <input type="button" id="last-page" onclick="lastPage()"class="slide next" value=">>">
             </div>
         </div>
     </div>
