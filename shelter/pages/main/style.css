@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 header {
     position: absolute;
     display: flex;
@@ -1152,6 +1156,8 @@ footer {
         animation-duration: .25s;
         visibility: visible;
     }
+
+    
 
     #start-content {
         margin: 150px 0 0;

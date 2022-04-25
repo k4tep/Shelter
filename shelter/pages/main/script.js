@@ -123,7 +123,7 @@ const burgerClick = () => {
     if(burgerMenu.classList.contains('start')){
         burgerMenu.classList.remove('start');
     }
-
+    document.getElementById('body').classList.toggle('overflow-hidden');
     burgerBlock.classList.toggle('hamburger-background');
     burgerIcon.classList.toggle('burger-rotate');
 }
@@ -140,9 +140,11 @@ const openPopup = (counter) => {
     document.getElementById(`parasites-pet`).innerHTML = "<b>Parasites: </b>" + pets[offset].parasites;
     document.getElementById('popup').classList.remove('popup-closed')
     document.getElementById('popup').classList.add('popup-open');
+    document.getElementById('body').classList.add('overflow-hidden');
 }
 
 const closePopup = () => {
-    document.getElementById('popup').classList.remove('popup-open')
+    document.getElementById('popup').classList.remove('popup-open');
     document.getElementById('popup').classList.add('popup-closed');
+    document.getElementById('body').classList.remove('overflow-hidden');
 }

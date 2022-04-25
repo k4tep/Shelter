@@ -3,6 +3,10 @@ body {
     padding: 0;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 header {
     position: sticky;
     top: 0px;

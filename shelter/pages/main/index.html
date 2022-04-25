@@ -8,7 +8,7 @@
     <script src="script.js"></script>
     <title>Shelter</title>
 </head>
-<body>
+<body id="body">
     <header>
         <div class="header-container">
             <div class="header-flex left-header-flex">
@@ -29,10 +29,10 @@
                             <a id="pets" href="../../pages/pets/index.html">Our pets</a>
                         </li>
                         <li>
-                            <a href="#help" class="disabled">Help the shelter</a>
+                            <a href="#help">Help the shelter</a>
                         </li>
                         <li>
-                            <a href="#contacts" class="disabled">Contacts</a>
+                            <a href="#contacts">Contacts</a>
                         </li>
                     </ul>
                 </nav>
@@ -45,16 +45,16 @@
                     </label>
                     <ul id="burg-menu" class="menu-box start" onclick="event.stopPropagation()">
                         <li>
-                            <a class="menu-item" id="about-shelter">About the shelter</a>
+                            <a class="menu-item" id="about-shelter" onclick="burgerClick()">About the shelter</a>
                         </li>
                         <li>
                             <a class="menu-item" id="pets" href="../../pages/pets/index.html">Our pets</a>
                         </li>
                         <li>
-                            <a class="menu-item disabled" href="#help">Help the shelter</a>
+                            <a class="menu-item" href="#help" onclick="burgerClick()">Help the shelter</a>
                         </li>
                         <li>
-                            <a class="menu-item disabled" href="#contacts">Contacts</a>
+                            <a class="menu-item" href="#contacts" onclick="burgerClick()">Contacts</a>
                         </li>
                     </ul>
                 </div>
