@@ -100,24 +100,34 @@ window.onresize = function () {
 
 
 
-function mix(array, repeatAmount){
-    const tmpArray = array;
-    const mixedArray = [...tmpArray];
-    for (let i = 1; i < repeatAmount; i++) {
-        const first = tmpArray.shift();
-        tmpArray.push(first);
-        mixedArray.push(...tmpArray);
+function generateArray(array, repeatAmount){
+    mixedArray = [];
+    for (let i = 0; i < repeatAmount; i++) {
+        const tmp = array;
+        mixedArray.push(...tmp.sort((a,b) => Math.random() > 0.5 ? 1 : -1));
     }
-    return mixedArray
+    return mixedArray;
 }
 
-const pets = mix(JSON.parse(jsonObject), 6);
+const pets = generateArray(JSON.parse(jsonObject), 6);
 
 const getAmountOfSlides = () => {
     return window.innerWidth > 1270 ? 8 : window.innerWidth < 758 ? 3 : 6;
 }
 
 let activeSlide = -1;
+window.onload = randomImg;
+
+function randomImg(){
+    console.log(pets);
+    let counter = 1;
+    while(counter <= 8){
+        document.getElementById(`${counter}-img`).src = pets[counter - 1].img;
+        document.getElementById(`${counter}-name`).innerHTML = pets[counter - 1].name;
+        counter++;
+    }
+
+} 
 
 const slide = (direction) => {
 
