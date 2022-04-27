@@ -94,6 +94,20 @@ const jsonObject = `
 const pets = JSON.parse(jsonObject);
 let activeSlide = -1;
 
+
+function randomImg(){
+    let counter = 1;
+    activeSlide = Math.floor(Math.random() * pets.length);
+    while(counter <= 3){
+        const offset = (activeSlide + counter) % pets.length;
+        document.getElementById(`${counter}-img`).src = pets[offset].img;
+        document.getElementById(`${counter}-name`).innerHTML = pets[offset].name;
+        counter++;
+    }
+} 
+window.onload = randomImg;
+
+
 const slide = (direction) => {
     const amountOfSlides = window.innerWidth > 1270 ? 3 : window.innerWidth < 759 ? 1 : 2;
 
